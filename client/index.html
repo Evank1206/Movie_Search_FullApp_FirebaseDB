@@ -6,22 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- css file import -->
-    <link rel="stylesheet" href="../client/css/style.css">
+    <!-- <link rel="stylesheet" href="../client/css/style.css"> -->
     <!-- sementic.ui cdn -->
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 
     <title>Movie Search</title>
 
 </head>
 
 <body>
-    <div class="container">
-        <form>
-            <input id="user-text" type="text" placeholder="enter something">
-            <input id="text-submit" type="submit">
+    <div class="ui container">
+        <h1 class="ui header">Movie Search App</h1>
+
+        <br></br>
+
+        <form class="ui form">
+            <input class="ui input" type="text" placeholder="enter something">
+            <br></br>
+            <button class="ui button primary" type="Search">Search</button>
         </form>
 
-    </div>
+        <br></br>
+
+        <hr>
+        <br></br>
+        <div class="ui btn-View"></div>
+        <br></br>
+        <hr>
+        <br></br>
+        <div class="ui divided items">
+            <div class="item">
+                <div class="ui image medium">
+                    <img class="ui" src="https://www.yogajournal.com/.image/t_share/MTUxMDUxNDQ2NDQyMjcyNzA5/fearless.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">Movie Name</a>
+                <div class="meta">
+                    <span class="cinema">Year</span>
+                </div>
+                <div class="description">
+                    <h5>actors:</h5>
+                    <span class="cinema">Year</span>
+                    <h5>Diractor:</h5>
+                    <span class="cinema">Year</span>
+                    <h5>Description</h5>
+                    <span class="cinema">Year</span>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -30,15 +62,17 @@
 
 
 
-    <!-- firebase CDN link -->
-    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-database.js"></script>
+            <!-- firebase CDN link -->
+            <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-database.js"></script>
 
-    <!-- jQuery CDN link -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <!-- js import file -->
-    <script src="../server/js/app.js"></script>
+            <!-- jQuery CDN link -->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            <!-- sementic.ui cdn -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+            <!-- js import file -->
+            <script src="../server/js/app.js"></script>
 </body>
 
 </html>
