@@ -25,18 +25,22 @@ $(document).ready(function () {
             $.ajax({
                 type: "GET",
                 url: movieURL
-            }).then(function(err, data){
-                if(err){
-                    console.log(err);
+            }).then(function(data){
+                if(data){
+                    console.log("movie title: "+data);
+                    console.log("movie Img: "+data.Poster);
+                    console.log("movie title: "+data.Title);
+                    console.log("movie year: "+data.Year);
+                    console.log("movie genre: "+data.Genre);
+                    console.log("movie desc: "+data.Plot);
+                    console.log("movie actors: "+data.Actors);
+                    console.log("movie Director: "+data.Director);
                 }else{
-                    console.log(data);
+                    console.log("NOT FOUND"); 
                 }
             })
 
             
         })
-
     });
-
-   
 });
