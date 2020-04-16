@@ -1,5 +1,17 @@
 $(document).ready(function () {
     // When user click the btn grab the value from User Input // showed in console.log
+          // dynamic hr & spacing between elements
+          var br = $("<br/>");
+          $(".btn-View").prepend(br); // give a space BEFORE created button between hr
+
+          var hr = $("<hr/>");
+          $(".btn-View").prepend(hr); // same as before(); give a hr BEFORE button
+
+          var hr = $("<hr/>");
+          $(".btn-View").after(hr);   // same as append(); give a hr AFTER button
+
+          var br = $("<br/>");
+          $(".btn-View").after(br);   // give a space AFTER created button between hr
 
     $(".button").on("click", function (e) {
         e.preventDefault()
@@ -8,19 +20,7 @@ $(document).ready(function () {
         if (getUserData == 0) {
             alert("Enter The Movie Name!")
         } else {
-        // dynamic hr & spacing between elements
-            var br = $("<br/>");
-            $(".btn-View").prepend(br); // give a space BEFORE created button between hr
-
-            var hr = $("<hr/>");
-            $(".btn-View").prepend(hr); // same as before(); give a hr BEFORE button
-
-            var hr = $("<hr/>");
-            $(".btn-View").after(hr);   // same as append(); give a hr AFTER button
-
-            var br = $("<br/>");
-            $(".btn-View").after(br);   // give a space AFTER created button between hr
-
+  
             //  creating the btn dynamic way to render them into html
             var btn = $("<button>");
             btn.addClass("ui button inverted primary createdBtn");
@@ -29,11 +29,12 @@ $(document).ready(function () {
             $(".btn-View").append(btn);
 
         }
+        
         // when clicked on created btn console.log the message
         $(".createdBtn").on("click", function () {
 
-            var hardCodedMovie = "Love";
-            var movieURL = "https://www.omdbapi.com/?t=" + hardCodedMovie + "&apikey=trilogy";
+            // var hardCodedMovie = "Love";
+            var movieURL = "https://www.omdbapi.com/?t=" + getUserData + "&apikey=trilogy";
 
             $.ajax({
                 type: "GET",
@@ -48,10 +49,15 @@ $(document).ready(function () {
                     // console.log("movie actors: "+data.Actors);
                     // console.log("movie Director: "+data.Director);
         /* CREATING DYNAMIC HTML ELEMENTS */
+        var contents = $("<div class='content'>");
+             $(".content").append(contents);
+
                     var img = $("<img class='ui img'>");
                         // img.addClass("ui img");
                         img.attr("src", data.Poster);
-                        $(".image").append(img);
+                        $(".content").append(img);
+                        $(".img").append(data.Poster)
+
     
                     var name = $("<h3>");
                         name.addClass("ui header MovieName");
@@ -96,7 +102,7 @@ $(document).ready(function () {
                     // $(".directorName").append(data.Director);
 
                 } else {
-                    console.log("MOVIE NOT FOUND");
+                    alert("MOVIE NOT FOUND");
                 }
             });
         });
