@@ -46,6 +46,13 @@ $(document).ready(function () {
                         name.text("Movie Name: ");
                     $(".content").append(name);
                     $(".MovieName").append(data.Title);
+
+                    var year = $("<p class='year'>");
+                        // genre.addClass("year");
+                        year.text("Year: ");
+                        $(".content").append(year);
+                    $(".year").append(data.Year);
+
          
                     
 
@@ -80,7 +87,7 @@ $(document).ready(function () {
 
                 // var spanMovieName = $("<span>");
                 //     spanMovieName.addClass("movieName");
-                //     spanMovieName.text()
+
                 // textDiv.append(spanMovieName);
                 // var genre = $("<p>");
                 //     genre.addClass("year");
