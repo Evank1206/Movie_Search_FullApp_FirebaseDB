@@ -47,14 +47,34 @@ $(document).ready(function () {
                     $(".content").append(name);
                     $(".MovieName").append(data.Title);
 
+                    var genre = $("<p class='Genre'>");
+                    $(".content").append(genre);
+                    $(".Genre").append(data.Genre);
+
                     var year = $("<p class='year'>");
                         // genre.addClass("year");
                         year.text("Year: ");
                         $(".content").append(year);
                     $(".year").append(data.Year);
 
-         
-                    
+                    var description = $("<span class='description'>");
+                        description.text("Description:  ");
+                    $(".content").append(description);
+                    $(".description").append(data.Plot);
+
+                    var actor = $("<p>");
+                        actor.addClass("actors");
+                        actor.text("Actors:  ");
+                        $(".content").append(actor);
+                        $(".actors").append(data.Actors);
+
+                    var Director = $("<p>");
+                        Director.addClass("director");
+                        Director.text("Director:  ");
+                        $(".content").append(Director);
+                        $(".director").append(data.Director);
+
+
 
 
 
